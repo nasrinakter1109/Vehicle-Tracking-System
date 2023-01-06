@@ -1,0 +1,58 @@
+<div class="card">
+  <div class="card-header bg-light text-dark">
+      <h4 class="text-center ">
+         Vehicle Registration List</h4>
+  </div>
+  <div class="card-body">
+      <div class="row">
+          <div class="col-md-5 " style="margin: 0 550px;">
+            <input type="text" (keyup)="search($event)" name="serch" class="form-control" autofocus placeholder="Search by Vehicle Name or Vehicle RegistationNo." />
+          </div>
+
+          </div>
+     
+      <div class="row">
+          <div class="data-table">
+              <table class="table table-bordered bg-macos table-hover text-center text-light">
+                  <thead>
+                      <tr>
+                          <th>#SN</th>
+                          <th>Vehicle Name</th>
+                          <th>Registration No</th>
+                          <th>Company Name</th>
+                          <th>Model</th>
+                          <th>Colour</th>
+                          <th>Ignition No</th>
+                          <th></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngIf="filterVehicle.length==0 && !isLoading">
+                          <td colspan="10" class="text-center">No order found.</td>
+                      </tr>
+                      <tr *ngIf="isLoading">
+                          <td colspan="10" class="text-center text-primary">
+                              <img src="../../../../../assets/img/loading.gif" height="40" width="40" /> Loading ...
+                          </td>
+                      </tr>
+                      <tr *ngFor="let vehicle of filterVehicle;let i=index" >
+                          <td>{{i+1}}</td>
+                          <td>{{vehicle.vehicleName}}</td>
+                          <td>{{vehicle.registrationNo}}</td>
+                          <td>{{vehicle.companyName}}</td>
+                          <td >{{vehicle.model }}</td>
+                          <td >{{vehicle.colour }}</td>
+                          <td >{{vehicle.ignitionKeyNumber }}</td>
+                          <td>
+                            <!-- <button   class="btn btn-info btn-sm">
+                                <span class="fa fa-edit"></span>
+                              </button>                               -->
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+          </div>
+      </div>
+  </div>
+

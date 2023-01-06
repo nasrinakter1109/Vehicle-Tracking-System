@@ -1,0 +1,3 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.template = "\n<div class=\"block-ui-wrapper {{name}} {{className}}\" [ngClass]=\"{ 'active': active }\">\n  <div class=\"block-ui-spinner\" *ngIf=\"!templateCmp\">\n    <div class=\"loader\"></div>\n    <div *ngIf=\"message || defaultMessage\" class=\"message\">\n      {{ message || defaultMessage }}\n    </div>\n  </div>\n  <ng-template *ngIf=\"templateCmp\" #templateOutlet></ng-template>\n</div>\n";

@@ -1,0 +1,29 @@
+  <div class="card">
+    <div class="form-group row mt-2">
+        <label class="col-form-label col-md-4 text-right font-weight-bold" for="vehicle">Vehicle</label>
+        <div class="col-md-4">
+         <ng-select [(ngModel)]="vehicleId" [items]="vehicleList" bindValue="id" bindLabel="vehicleName" placeholder="Select Vehicle " name="vehicle"></ng-select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-form-label col-md-4 text-right font-weight-bold" for="device">Device</label>
+        <div class="col-md-4">
+         <ng-select [(ngModel)]="deviceId" [items]="devices" bindLabel="deviceName" bindValue="id" placeholder="Select Device"></ng-select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row demo-inline-spacing" style="margin: 0 auto;">
+          <button  (click)="showMap()" class="btn btn-success mx-1" type="button" >Show Map</button>
+        </div>         
+      </div>
+  <div class="container">  
+    <h1>Angular Google Map Get Current Location Example</h1>    
+    <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+      <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+        ></agm-marker>
+    </agm-map>  
+    <h5>Address: {{address}}</h5>
+    <div>Latitude: {{latitude}}</div>
+    <div>Longitude: {{longitude}}</div>    
+  </div>
+</div>

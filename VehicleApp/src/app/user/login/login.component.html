@@ -1,0 +1,49 @@
+<div class="authentication-wrapper authentication-1 px-4">
+  <div class="authentication-inner py-5">
+
+    <!-- Logo -->
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="ui-w-60">
+        <div class="w-100 position-relative" style="padding-bottom: 54%">
+        </div>
+      </div>
+    </div>
+    <!-- / Logo -->
+
+    <!-- Form -->
+    <form class="my-5">  
+      <div class="form-group">
+        <label class="form-label">Username</label>
+        <input [(ngModel)]="credentials.loginId" (focus)="clearErrMsg()" name="loginPassword" type="text"
+         class="form-control" placeholder="User Id">
+        <!-- <div *ngIf="submitted && credentials.email.length === 0" class="invalid-feedback"> -->
+            <!-- <div *ngIf="submitted && credentials.loginId.length === 0" class="text-danger pl-2">
+              <div *ngIf="credentials.loginId.length === 0">Username is required</div>
+            </div> -->
+        <!-- </div> -->
+      </div>
+      <div class="form-group">
+        <label class="form-label d-flex justify-content-between align-items-end">
+          <div>Password</div>
+          <a class="forgot-url" style="color:rgb(38, 111, 170); font-size: small;" href="javascript:void(0)" [routerLink]="['/user/retrieve']" class="d-block small">Forgot password?</a>
+        </label>
+        <input [(ngModel)]="credentials.loginPassword" (focus)="clearErrMsg()" name="loginPassword" type="password"
+        class="form-control" placeholder="Password">
+        <!-- <div *ngIf="submitted && credentials.loginPassword.length === 0" class="text-danger pl-2">
+          <div *ngIf="credentials.loginPassword.length === 0">Password is required</div>
+        </div> -->
+            </div>
+      <div class="form-group row">
+        <button type="button" [ladda]="isLoading" data-style="zoom-in" (click)="login()"
+          class="btn btn-primary col">Login</button>
+      </div>
+      <div class="d-flex justify-content-between align-items-center m-0">
+        <label class="custom-control custom-checkbox m-0">
+          <input type="checkbox" class="custom-control-input" name="rememberMe" [(ngModel)]="credentials.rememberMe">
+          <span class="custom-control-label text-secondary" >Remember me</span>
+        </label>
+      </div>
+    </form>
+    <!-- / Form -->
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<div class="card">
+  <div class="card-header text-center bg-dark text-light">
+    <h4>Vehicle Registration Form</h4>
+  </div>
+  <div class="card-body">
+    <div class="container">
+      <form [formGroup]="vehicleRegistrationFrom" >
+        <div class="form-group row">
+          <label class="col-form-label col-md-4 text-right" for="name"><i class="text-danger">*</i>Vehicle Name</label>
+          <div class="col-md-8">
+            <input formControlName="vehicleName" [ngClass]="{'is-invalid':( f['vehicleName'].touched || f['vehicleName'].dirty || isLoading) && f['vehicleName'].invalid}"  name="name" class="form-control" type="text" placeholder="Enter Vehicle Name">
+            <div *ngIf="f['vehicleName'].invalid && ( f['vehicleName'].touched || f['vehicleName'].dirty || isLoading)" class="text-danger">
+              <i *ngIf="f['vehicleName'].errors.required" class="text-danger">Vehicle Name is required</i>
+          </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-form-label col-md-4 text-right" for="ip"><i class="text-danger">*</i>Registration No of Vehicle</label>
+          <div class="col-md-8">
+            <input formControlName="registrationNo" [ngClass]="{'is-invalid':( f['registrationNo'].touched || f['registrationNo'].dirty || isLoading) && f['registrationNo'].invalid}" name="ip" class="form-control" type="text" placeholder="Enter Registration No of Vehicle">
+            <div *ngIf="f['registrationNo'].invalid && ( f['registrationNo'].touched || f['registrationNo'].dirty || isLoading)" class="text-danger">
+              <i *ngIf="f['registrationNo'].errors.required" class="text-danger">Vehicle Registration No is required</i>
+          </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-form-label col-md-4 text-right" for="compName">Company Name</label>
+          <div class="col-md-8">
+            <input formControlName="companyName" name="compName" class="form-control" type="text" placeholder="Enter Company Name">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-form-label col-md-4 text-right" for="model">Model of Vehicle</label>
+          <div class="col-md-8">
+            <input formControlName="model" name="model" class="form-control" type="text" placeholder="Enter Model of Vehicle">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-form-label col-md-4 text-right" for="color">Colour</label>
+          <div class="col-md-8">
+            <input formControlName="colour" name="color" class="form-control" type="text" placeholder="Enter Colour">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-form-label col-md-4 text-right" for="keyNo"><i class="text-danger">*</i>Ignition Key Number</label>
+          <div class="col-md-8">
+            <input formControlName="ignitionKeyNumber" [ngClass]="{'is-invalid':( f['ignitionKeyNumber'].touched || f['ignitionKeyNumber'].dirty || isLoading) && f['ignitionKeyNumber'].invalid}" name="keyNo" class="form-control" type="text" placeholder="Enter Ignition Key Number">
+            <div *ngIf="f['ignitionKeyNumber'].invalid && ( f['ignitionKeyNumber'].touched || f['ignitionKeyNumber'].dirty || isLoading)" class="text-danger">
+              <i *ngIf="f['ignitionKeyNumber'].errors.required" class="text-danger">Vehicle Ignition Key Number No is required</i>
+          </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row demo-inline-spacing" style="margin: 0 auto;">
+            <button [ladda]="isLoading" (click)="saveVehicle()" class="btn btn-success mx-1" type="button" >Submit</button>
+            <button (click)="reset()" class="btn btn-primary mx-1" type="button">Reset</button>
+          </div>         
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

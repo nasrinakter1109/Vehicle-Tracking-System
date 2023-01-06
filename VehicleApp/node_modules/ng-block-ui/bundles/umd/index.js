@@ -1,0 +1,22 @@
+(function (factory) {
+    if (typeof module === "object" && typeof module.exports === "object") {
+        var v = factory(require, exports);
+        if (v !== undefined) module.exports = v;
+    }
+    else if (typeof define === "function" && define.amd) {
+        define(["require", "exports", "./lib/block-ui.module", "./lib/components/block-ui/block-ui.component", "./lib/components/block-ui-content/block-ui-content.component", "./lib/decorators/block-ui.decorator", "./lib/services/block-ui.service"], factory);
+    }
+})(function (require, exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    var block_ui_module_1 = require("./lib/block-ui.module");
+    exports.BlockUIModule = block_ui_module_1.BlockUIModule;
+    var block_ui_component_1 = require("./lib/components/block-ui/block-ui.component");
+    exports.BlockUIComponent = block_ui_component_1.BlockUIComponent;
+    var block_ui_content_component_1 = require("./lib/components/block-ui-content/block-ui-content.component");
+    exports.BlockUIContentComponent = block_ui_content_component_1.BlockUIContentComponent;
+    var block_ui_decorator_1 = require("./lib/decorators/block-ui.decorator");
+    exports.BlockUI = block_ui_decorator_1.BlockUI;
+    var block_ui_service_1 = require("./lib/services/block-ui.service");
+    exports.BlockUIService = block_ui_service_1.BlockUIService;
+});

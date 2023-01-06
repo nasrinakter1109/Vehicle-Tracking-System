@@ -1,0 +1,1 @@
+[{"__symbolic":"module","version":4,"metadata":{"BlockUIRouterModule":{"__symbolic":"reference","module":"./lib/router/block-ui-router.module","name":"BlockUIRouterModule","line":4,"character":2},"BlockUIPreventNavigation":{"__symbolic":"reference","module":"./lib/router/block-ui-prevent-navigation.service","name":"BlockUIPreventNavigation","line":5,"character":2}}}]

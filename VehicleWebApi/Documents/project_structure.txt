@@ -1,0 +1,83 @@
+|```````````````````````````````````|
+|  Project/Folder/File Directory    |
+|	    			    |
+`````````````````````````````````````
+
+--ENA--+
+	|--.git--*
+	|--ENA.Angular--+
+	|		|-dist----------+
+	|		|		|-*
+	|		|-e2e-----------+
+	|		|		|-*
+	|		|-node_modules--+
+	|		|		|-*
+	|		|--src----------+
+	|		|		|-app-----------+
+	|		|		|		|-error
+	|		|		|		|-guards
+	|		|		|		|-home-----+
+	|		|		|		|	   |-startup
+	|		|		|		|	   |-dashboard
+	|		|		|		|	   |-system-setup
+	|		|		|		|	   |-hr-menu
+	|		|		|		|	   |-property
+	|		|		|		|	   |-*
+	|		|		|		|-models---+
+	|		|		|		|	   |-system-setup.model.ts
+	|		|		|		|	   |-hr-menu.model.ts
+	|		|		|		|	   |-property.model.ts
+	|		|		|		|	   |-property-category.model.ts
+	|		|		|		|
+	|		|		|		|-services-+
+	|		|		|		|	   |-system-setup.service.ts
+	|		|		|		|	   |-hr-menu.service.ts
+	|		|		|		|	   |-property.service.ts
+	|		|		|		|	   |-attendance.service.ts
+	|		|		|		|	   |-leave.service.ts
+	|		|		|		|	   |-*.service.ts
+	|		|		|		|
+	|		|		|		|-layout--+
+	|		|		|		|-shared--+
+	|		|		|		|	  |-components
+	|		|		|		|	  |-*.ts
+	|		|		|		|-user
+	|		|		|		|-*
+	|		|		|		|
+	|		|		|-assets--------|
+	|		|		|-environments--|
+	|		|		|-vendor--------|
+	|		|		|-*
+	|--ENA.Api------+
+	|		|-Controllers---+
+	|		|		|-SystemSetupController.cs
+	|		|		|-HrController.cs
+	|		|		|-PropertyController.cs
+	|		|		|-AttendanceController.cs
+	|		|		|-*
+	|		|		
+	|		|-ViewModels----+
+	|		|		|-EmployeeInfoViewModel.cs
+	|		|		|-*.cs
+	|		|		
+	|		|-Models--------+
+	|		|		|-EmployeeGenInfoModel.cs
+	|		|		|-*.cs
+	|		|		
+	|		|-DbContext-----+
+	|		|		|-SystemSetupGetway.cs
+	|		|		|-HrGetway.cs
+	|		|		|-PropertyGetway.cs
+	|		|		|-AttendanceGetway.cs
+	|		|		
+	|		|-Helper--------+
+	|		|		|-CustomErrorException.cs
+	|		|		|-Token.cs
+	|		|-obj
+	|		|-bin
+	|		|-*
+	|
+	|--Documents----+
+	|		|-project_structure.txt
+
+
